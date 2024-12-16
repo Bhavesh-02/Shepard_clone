@@ -1,0 +1,80 @@
+#announcement_bar{
+    display: flexbox;
+    text-align: center;
+    
+    color: white;
+    background-color: black;
+    height: 40px;
+    margin-top:0;
+    border: 0;
+    padding: 0;
+}
+
+.announcement_para{
+    padding-top: 10px;
+}
+
+.F_header{
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Fheader_searchbox{
+    padding: 30px;
+    size: 50px;
+
+}
+
+.Fheader_admin{
+    display: flex;
+}
+
+.Fheader_profile {
+    padding-top: 35px;
+    padding-left: 15px;
+}
+
+.Fheader_cart {
+    padding: 35px;
+    padding-right: 10px;
+}
+
+.logo {
+    text-align: center;
+}
+
+
+.S_header{
+    padding-top: 7px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Collection_bar{
+    justify-content: center;
+    text-align: center;
+    padding: 30px 0px;
+    font-size: 30px;
+
+}
+
+.collection_card{
+    resize: both;
+    width: 17vw;
+    height: 16vw;
+    padding: 0px 12px;
+    border-radius: 7%;
+}
+
+.view_button{
+    font-size: 100%;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    border: 0px;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 25px;
+}
