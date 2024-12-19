@@ -1,7 +1,9 @@
 *{
+
     margin: 0px;
     padding: 0px;
     font-family: inter, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 
 body{
@@ -9,36 +11,41 @@ body{
 }
 
 #announcement_bar{
-    display: flexbox;
-    text-align: center;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     background-color: black;
-    height: 40px;
+    height: auto;
     margin-top:0;
     border: 0;
     padding: 0;
+    overflow: hidden;
+    
 }
 
 .announcement_para{
-    padding-top: 10px;
+    padding-top: 12px;
 }
 
 .F_header{
     font-size: x-large;
-    padding: 5px;
+    padding: 5px 0;
     display: flex;
-    justify-content:space-evenly
+    width: 100%;
+    overflow: hidden;
 }
 
 .Fheader_searchbox{
-    padding: 200px;
     display: flex;
     align-items: center;
     position: relative;
     padding: 30px;
     size: 50px;
-    margin-right: 120px;
+    padding-left: 5%;
+    resize: horizontal;
+    width: auto;
+    
 
 }
 
@@ -46,11 +53,10 @@ body{
     
     border-radius: 15px;
     font-size: large;
-    padding: 200px;
     height: 27px;
-    width: 280px;
+    width: auto;
     padding: 10px;
-    padding-right: 40px; 
+     
     border: 1px solid black;
     border-radius: 4px;
 }
@@ -66,19 +72,19 @@ body{
 }
 
 .search_icon i {
-    margin-right: 22px;
+    padding-right: 22px;
     font-size: 18px; 
     color: #888;
   }
 
 .Fheader_admin{
-    margin-left: 120px;
     display: flex;
+    padding: 0% 5%;
 }
 
 .Fheader_profile {
     padding-top: 35px;
-    padding-left: 15px;
+   
 }
 
 .Fheader_cart {
@@ -87,8 +93,9 @@ body{
 }
 
 .logo {
-    margin-right: 120px;
+    
     text-align: center;
+    padding: 0 15%;
 }
 
 .banner{
@@ -101,17 +108,31 @@ body{
     height: 70%;
 }
 
+#mySidenav{
+    display: none;
+}
+
+
 .S_header{
     padding-top: 7px;
     list-style-type: none;
     display: flex;
     justify-content: center;
+    
 }
 
 .list{
-    padding: 10px;
+    padding: 2%;
 }
 
+.collection_box{
+    padding-top: 40px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+    
+ 
 .Collection_bar{
     justify-content: center;
     text-align: center;
@@ -123,11 +144,19 @@ body{
 }
 
 .collection_card{
+    text-align: center;
     resize: both;
-    width: 17vw;
+    width: 16%;
     height: 16vw;
     padding: 0px 12px;
     border-radius: 7%;
+}
+
+.media_collection{
+    display:none ;
+    
+   
+
 }
 
 .view_button{
@@ -145,13 +174,16 @@ body{
 .Featured_box{
     background-color: #f7f7f7;
     margin-top:  30px; 
+    overflow: hidden;
 
     
 }
 
 .Featured_text{
     font-family: inter, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background: linear-gradient(red,red) bottom/ 10% 2px no-repeat;
 }
 
 .Featured_bar{
@@ -167,8 +199,10 @@ body{
 }
 
 .Featured_grid{
+    width: fit-content;
     display: flex;
     justify-content: center;
+    padding-top: 30px;
     padding-bottom: 40px;
 }
 
@@ -178,6 +212,7 @@ body{
     text-align: center;
     
 }
+
 
 .Figure_detail{
     text-align: center;
@@ -240,16 +275,23 @@ body{
 
 .Best_sellers{
     background-color: #f7f7f7;
+    width: 100%;
+    overflow: hidden;
 }
 
 .Best_txt{
     font-family: inter, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: xx-large;
     padding: 30px;
+    padding-bottom: 20px;
+
+    background: linear-gradient(red,red) bottom/ 8% 2px no-repeat;
+
 }
 
-.blog{
+.Blog{
     flex-direction: column;
+    overflow: hidden;
 }
 
 .wrapper{
@@ -277,8 +319,10 @@ body{
 .Blog_grid{
     display: flex;
     resize: both;
+    padding-top: 30px;
+    margin: 10px 30px;
     
-    margin: 0px 30px;
+
 }
 
 .blog1_head{
@@ -310,6 +354,7 @@ body{
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
+    overflow: hidden;
 }
 
 .shop_card{
@@ -413,8 +458,7 @@ body{
 }
 
 .news_form{
-    margin-top: 25px
-    ;
+    margin-top: 25px ;
 }
 
 .news_input{
@@ -501,3 +545,165 @@ body{
     size: 500px;
     height: 5vw;
 }
+
+.last_footer{
+    background-color: #3065ce;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+/*Responsiveness*/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    #announcement_bar {
+        width: 100%;
+    }
+
+    .collection_box{
+        display: block;
+    }
+
+    .about_section{
+        display: block;
+        padding: 0%;
+        justify-content: center;
+    }
+
+    .about_txt{
+    
+    text-align: left;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 1.2rem;
+    }
+
+    .txt_head{
+        padding: 20% 0%;
+        text-align: left;
+        size: 40px;
+        letter-spacing: 1px;
+    }
+
+    .about_para{
+        width: 100%;
+        padding: 5% 0 ;
+    
+    }
+
+    .about_pic{
+        padding-right: 0%;
+        padding-left: 0%;
+        align-items: center ;
+        width: 100%;
+    }
+
+    .about_img{
+        width: 80%;
+        height: 60%;
+    }
+
+    .Featured_Scard{
+        width: 50%;
+    }
+
+    .S_header{
+        display: none;
+    }
+
+    .shop_grid{
+        display: block;margin: 50px 0;
+    }
+
+    .shop_card{
+        height: 100%;
+        padding-left: 0%;
+    }
+
+    .shop_img{
+        width: 100vw;
+        height: 60vw;
+    }
+
+    .overlap{
+        border: 2px solid white;
+        margin: 0px 10%;
+        background-color: #ffffff80;
+        position: relative;
+        bottom: 7rem;
+    }
+
+    .shop_head{
+        font-size: smaller;
+    }
+
+
+    .inside_footer{
+        display: block;
+        width: 100%;
+    }
+
+    .footer_box1{
+        width: 100%;
+        padding: 2% 0%;
+    }
+
+    .footer_box2{
+        width: 100%;
+        padding: 2% 0%;
+    }
+
+    .news_form{
+        display: block;
+    }
+
+    .news_form_p{
+        display: block;
+    }
+
+    .collection_box{
+        display: none;
+    }
+
+    .media_collection{
+        display: flex;
+        justify-content: center;
+        padding: 20px 0 ;
+        width: 100%;
+    }
+
+    .collection_card{
+        width: 70%;
+        height: 50%;
+    }
+
+    .Featured_grid{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        
+        
+    }
+
+    .Featured_Scard{
+        width: 40%;
+        padding-top: 15%;
+    }
+
+    
+    .Featured_media{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Featured_card{
+        width: 100%;
+        height: 75%;
+    }
+
+}
+
