@@ -28,6 +28,52 @@ body{
     padding-top: 12px;
 }
 
+.F_header2{
+    display: none;
+}
+
+.toggle_icon{
+    padding-left: 8%;
+    display: flex;
+    align-items: center;
+}
+
+.sidenav {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 20px 20px 20px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+
 .F_header{
     font-size: x-large;
     padding: 5px 0;
@@ -111,9 +157,6 @@ body{
     height: 70%;
 }
 
-#mySidenav{
-    display: none;
-}
 
 .S_header_box{
     width: 100%;
@@ -167,9 +210,6 @@ body{
 
 .media_collection{
     display:none ;
-    
-   
-
 }
 
 .view_button{
@@ -218,6 +258,7 @@ body{
 .Featured_grid{
     width: fit-content;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 1%;
@@ -246,7 +287,7 @@ body{
 .Featured_card{
     resize: both;
     width: 17vw;
-    height: 16vw;
+    height: 20vw;
     padding: 0px 12px;
     border-radius: 7%;
 }
@@ -325,6 +366,7 @@ body{
 }
 
 .card{
+    border: none;
     border: none;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2) , -1px -1px 5px rgba(0, 0, 0, 0.2);
     height: 30vw;
@@ -437,7 +479,7 @@ body{
 
 
 
-.testimonial-card {
+.testimonial-card1 {
    margin: 2%;
     width: 25%;
     background-color: #ffffff;
@@ -445,6 +487,15 @@ body{
     box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.1);
     padding: 3%;
   }
+
+  .testimonial-card2 {
+    margin: 2%;
+     width: 25%;
+     background-color: #ffffff;
+     border-radius: 10px;
+     box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.1);
+     padding: 3%;
+   }
   
   .testimonial-header {
     display: flex;
@@ -492,13 +543,14 @@ body{
   }
 
   .faq-header{
-    justify-items: center;
+   
     width: 50%;
+    align-content: center;
   }
 
   .faq-section {
     display: flex;
-    max-width: 81.5%;
+    max-width: 82%;
     margin: 0 auto;
     background: #F7F7F7;
     border-radius: 8px;
@@ -519,23 +571,26 @@ body{
   }
   
   .faq-accordion {
-    margin-top: 20px;
+    
     background-color: #ECEEEE;
+    width: 50%;
+    padding: 1.8%;
+    border-radius: 3%;
   }
   
   .accordion-item {
     margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border-bottom: 1px solid black;
+    
     overflow: hidden;
   }
   
   .accordion-header {
-    background: #f7f7f7;
+    background: #ECEEEE;
     border: none;
     padding: 15px;
     font-size: 1em;
-    text-align: left;
+    width: 100%;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -549,6 +604,7 @@ body{
   .accordion-icon {
     font-size: 1.2em;
     color: #294159;
+    justify-content: right;
   }
   
   .accordion-content {
@@ -563,7 +619,6 @@ body{
     margin: 0;
   }
   
-  /* Open state for the accordion */
   .accordion-item.open .accordion-content {
     display: block;
   }
@@ -738,6 +793,7 @@ body{
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     #announcement_bar {
         width: 100%;
+        text-align: center;
     }
 
     .collection_box{
@@ -779,8 +835,9 @@ body{
     }
 
     .about_img{
-        width: 80%;
+        width: 92%;
         height: 60%;
+        padding: 5% 4%;
     }
 
     .Featured_Scard{
@@ -792,17 +849,21 @@ body{
     }
 
     .shop_grid{
-        display: block;margin: 50px 0;
+        display: block;
+        margin: 8% 0 0 0;
+        padding: 0;
     }
 
     .shop_card{
-        height: 100%;
-        padding-left: 0%;
+        width: 90%;
+        height: 1%;
+        padding: 5%;
     }
 
     .shop_img{
-        width: 100vw;
-        height: 60vw;
+        width: 100%;
+        height: 100%;
+    
     }
 
     .overlap{
@@ -810,17 +871,23 @@ body{
         margin: 0px 10%;
         background-color: #ffffff80;
         position: relative;
-        bottom: 7rem;
+        bottom: 6rem;
+      
     }
 
     .shop_head{
-        font-size: smaller;
+        font-size: 100%;
+        letter-spacing: 1.3px;
     }
+    
 
+    .shop_button{
+        padding: 2% 5%;
+    }
 
     .inside_footer{
         display: block;
-        width: 100%;
+        
     }
 
     .footer_box1{
@@ -867,7 +934,7 @@ body{
     }
 
     .Featured_Scard{
-        width: 40%;
+        width: 45%;
         padding-top: 15%;
     }
 
@@ -880,7 +947,118 @@ body{
     .Featured_card{
         width: 100%;
         height: 75%;
+        padding: 0%;
     }
 
-}
+    .testimonial-card1{
+        display: inline;
+        justify-content: center;
+        width: 75%;
+    }
+    .testimonial-card2{
+        display: none;
+    }
 
+
+
+    .Fheader_searchbox{
+        display: none;
+    }
+
+    .F_header{
+        display: none;
+    }
+
+    .F_header2{
+        font-size: x-large;
+        padding: 5px 0;
+        display: flex;
+        width: auto;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+
+    .Fheader_admin{
+        padding: 0 3%;
+    }
+
+    .logo{
+        width: auto;
+        padding: 0%;
+    }
+
+    .Best_txt{
+        font-size: 80%;
+        
+    }
+
+    .media_blog{
+        display: none;
+    }
+
+    .card{
+        border: none;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2) , -1px -1px 5px rgba(0, 0, 0, 0.2);
+        height: 30vw;
+        width: 100%;
+        height: 100%;
+    }
+
+    .blog_img{
+        width: 100%;
+        height: 60%;
+        padding: 1%;
+    }
+
+    .wrapper{
+        padding: 0%;
+    }
+
+    .blog_box{
+        padding-bottom: 25%;
+
+        }
+
+    .blog1_head{
+        justify-items: center;
+        padding: 3%;
+
+    }
+
+
+    .newsletter_box{
+        padding: 5% 0%;
+    }
+
+    .subscribe_button {
+        font-size: 100%;
+        background-color: black;
+        color: white;
+        border: none;
+        justify-content: center;
+        text-align: center;
+        width: 76%;
+        height: 2%;
+        border-radius: 5px;
+        margin: 3% 0%;
+    }
+
+    .news_input{
+        padding: 3% 20%;
+    }
+
+    .Products_bar{
+        margin: 0%;
+    }
+
+    .news_head{
+        font-size: 130%;
+        padding: 0%;
+        letter-spacing: 2.5px;
+        margin-top: 5%;
+    }
+    
+}
